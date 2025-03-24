@@ -3,19 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
+    <title>Login</title>
     <link rel="stylesheet" href="/CSS/signup.css" />
 </head>
 <body>
     <div class ="wrapper">
-        <h1>Signup</h1>
+        <h1>Login</h1>
         <form>
-            <div>
-                <label for="fullnames-input">
-                    <img src="assets/account_circle.svg">
-                </label>
-                <input required type="text" name="fullnames" id="fullnames-input" placeholder="Fullnames">
-            </div>
             <div>
                 <label for="phonenumber-input">
                     <img id="passwordimg" src="assets/call.svg">
@@ -28,16 +22,10 @@
                 </label>
                 <input required type="password" name="password" id="password-input" placeholder="Password">
             </div>
-            <div>
-                <label for="repeat-password-input">
-                    <img id="passwordimg" src="assets/lock.svg">
-                </label>
-                <input required type="password" name="repeat-password" id="repeat-password-input" placeholder="Repeat password">
-            </div>
-            <button type="submit">Signup</button>
+            <button type="submit">Login</button>
         </form>
-        <p>Already have an account? <a href="login.html">login</a></p>
+        <p>New here? <a href="/HTML/signup.html">Signup</a></p>
     </div>
-
+    <script src="index.js"></script>
 </body>
 </html>
