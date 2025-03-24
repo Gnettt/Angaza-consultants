@@ -126,15 +126,7 @@ form input:focus{
   a:hover{
     text-decoration: underline;
   }
-  form div.incorrect label{
-    background-color: #f06272;
-  }
-  form div.incorrect input{
-    border-color: #f06272;
-  }
-  #error-message{
-    color:#f06272;
-  }
+  
 
     
 
