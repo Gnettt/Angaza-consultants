@@ -1,0 +1,24 @@
+header {
+    background-color: rgb(53, 93, 55);
+    border-bottom: 1.5px solid #454545;
+    padding: 0%;
+  }
+
+nav h1 {
+    color: #060606;
+    font-size:56px;
+    margin: 0;
+    padding-left: 10px;
+  }
+  
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+nav ul {
+    display: flex;
+    list-style: none; 
+    gap: 20px;
+  }
