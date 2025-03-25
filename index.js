@@ -50,28 +50,3 @@ function getSignupFormErrors(firstname, phonenumber, password, repeatPassword){
   return errors;
 }
 
-function getLoginFormErrors(phonenumber, password){
-  let errors = []
-
-  if(phonenumber === '' || phonenumber == null){
-    errors.push('Phone number is required')
-    phonenumber_input.parentElement.classList.add('incorrect')
-  }
-  if(password === '' || password == null){
-    errors.push('Password is required')
-    password_input.parentElement.classList.add('incorrect')
-  }
-
-  return errors;
-}
-
-const allInputs = [firstname_input, phonenumber_input, password_input, repeat_password_input].filter(input => input != null)
-
-allInputs.forEach(input => {
-  input.addEventListener('input', () => {
-    if(input.parentElement.classList.contains('incorrect')){
-      input.parentElement.classList.remove('incorrect')
-      error_message.innerText = ''
-    }
-  })
-})
