@@ -24,7 +24,7 @@ html{
 }
 body{
     min-height: 100vh;
-    background-image: url(); 
+    background-image: url(/assets/rice-field-7890204_1280.jpg); 
     background-size: cover;
     background-position: right;
     overflow: hidden;
