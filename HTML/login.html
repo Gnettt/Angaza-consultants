@@ -1,31 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/CSS/signup.css" />
+    <link rel="stylesheet" href="/CSS/signup.css">
 </head>
 <body>
-    <div class ="wrapper">
+
+    <div class="wrapper">
         <h1>Login</h1>
-        <form>
-            <div>
+        <form action="/login" method="POST"> 
+            <div class="input-container">
                 <label for="phonenumber-input">
-                    <img id="img" src="/assets/call.svg">
+                    <img src="/assets/call.svg" alt="Phone Icon">
                 </label>
-                <input required type="text" name="Phone number" id="phonenumber-input" placeholder="Phonenumber">
+                <input required type="tel" name="phone" id="phonenumber-input" 
+                       placeholder="Phone Number" autocomplete="tel" 
+                       aria-label="Enter your phone number">
             </div>
-            <div>
+
+            <div class="input-container">
                 <label for="password-input">
-                    <img src="/assets/lock.svg">
+                    <img src="/assets/lock.svg" alt="Lock Icon">
                 </label>
-                <input required type="password" name="password" id="password-input" placeholder="Password">
+                <input required type="password" name="password" id="password-input" 
+                       placeholder="Password" autocomplete="current-password" 
+                       aria-label="Enter your password">
             </div>
+
             <button type="submit">Login</button>
         </form>
-        <p>New here? <a href="/HTML/signup.html">Signup</a></p>
+
+        <p>New here? <a href="/HTML/signup.html">Sign up</a></p>
     </div>
+
     <script src="index.js"></script>
+
 </body>
 </html>
