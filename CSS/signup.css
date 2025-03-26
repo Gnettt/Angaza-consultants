@@ -1,135 +1,179 @@
 .lobster-regular {
-    font-family: "Lobster", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
- 
-:root{
-    --accent-color: #316c21;
-    --base-color: #ffffff;
-    --text-color: #000000;
-    --input-color: #f3fff7;
-    --button-color: #316c21;
-    --button-hover: #4c8632;   
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-*{
-    margin: 0;
-    padding: 0;
+
+:root {
+  --accent-color: #316c21;
+  --base-color: #ffffff;
+  --text-color: #000000;
+  --input-color: #f3fff7;
+  --button-color: #316c21;
+  --button-hover: #4c8632;   
 }
-html{
-    font-family: Poppins, 'Segoe UI', Geneva;
-    font-size: 12px;
-    color: var(--text-color);
-    text-align: center;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    min-height: 100vh;
-    background-image: url(/assets/rice-field-7890204_1280.jpg); 
-    background-size: cover;
-    background-position: right;
-    overflow: hidden;
+
+html {
+  font-family: Poppins, 'Segoe UI', Geneva;
+  font-size: 12px;
+  color: var(--text-color);
+  text-align: center;
 }
-.wrapper{
-    box-sizing:border-box;
-    background-color: var(--base-color);
-    height: 100vh;
-    width: max(40%, 600px);
-    padding: 10px;
-    border-radius: 0 20px 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+body {
+  min-height: 100vh;
+  background-image: url(/assets/rice-field-7890204_1280.jpg); 
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
-h1{
-    font-size: 3rem;
-    font-weight: 900;
-    text-transform: uppercase;
+
+
+.wrapper {
+  background-color: var(--base-color);
+  width: max(40%, 600px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: float 4s ease-in-out infinite;
 }
-form{
-    width:min-content(400px,100%) ;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
+
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
 }
-form > div{
-    width:100%;
-    display:flex;
-    justify-content: center;
-     align-items: center;
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
 }
-form label{
-    flex-shrink: 0;
-    height: 50px;
-    width: 50px;
-    background-color: var(--accent-color);
-    fill: var(--base-color);
-    color: var(--base-color);
-    border-radius: 10px 0 0 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: 500;
+
+
+h1:hover {
+  color: var(--accent-color);
 }
-form input{
-    box-sizing: border-box;
-    flex-grow: 1;
-    min-width: 0;
-    height: 50px;
-    padding: 1em;
-    font: inherit;
-    border-radius:0 10px 10px 0;
-    border: 2px solid var(--input-color);
-    border-left: none;
-    background-color: var(--input-color);
-    transition: 150ms ease;
+
+form {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
+
+
+form > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+
+form label {
+  height: 50px;
+  width: 50px;
+  background-color: var(--accent-color);
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+form input {
+  flex-grow: 1;
+  height: 50px;
+  padding: 1em;
+  font: inherit;
+  border-radius: 0 10px 10px 0;
+  border: 2px solid var(--input-color);
+  border-left: none;
+  background-color: var(--input-color);
+  transition: 0.3s ease-in-out;
+}
+
+
 form input:hover {
-    border-color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-color: #e7ffee;
 }
-form input:focus{
-    outline: none;
-    border-color: var(--text-color);
-  }
-  div:has(input:focus) > label{
-    background-color: var(--text-color);
-  }
-  form input::placeholder{
-    color: var(--text-color);
-  }
-  form button{
-    margin-top: 10px;
-    border: none;
-    border-radius: 1000px;
-    padding: .85em 4em;
-    background-color: var(--accent-color);
-    color: var(--base-color);
-    font: inherit;
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 150ms ease;
-  }
-  form button:hover{
-    background-color: var(--text-color);
-  }
-  form button:focus{
-    outline: none;
-    background-color: var(--text-color);
-  }
-  a{
-    text-decoration: none;
-    color: var(--accent-color);
-  }
-  a:hover{
-    text-decoration: underline;
-  }
-  
 
-    
+form input:focus {
+  outline: none;
+  border-color: var(--text-color);
+  box-shadow: 0px 0px 8px rgba(49, 108, 33, 0.5);
+}
 
 
+div:has(input:focus) > label {
+  background-color: var(--text-color);
+  transform: scale(1.1);
+}
 
-  
+form input::placeholder {
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+
+form button {
+  margin-top: 10px;
+  border: none;
+  border-radius: 1000px;
+  padding: 0.85em 4em;
+  background-color: var(--accent-color);
+  color: var(--base-color);
+  font: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+form button:hover {
+  background-color: var(--button-hover);
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(49, 108, 33, 0.5);
+}
+
+form button:focus {
+  outline: none;
+  background-color: var(--text-color);
+  transform: scale(1.1);
+}
+
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+
+a:hover {
+  text-decoration: underline;
+  color: var(--button-hover);
+}
